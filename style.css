@@ -1,0 +1,166 @@
+:root{
+
+}
+
+@font-face{
+    font-family: Tusker;
+    src: url("./assets/TuskerGrotesk-7800Super.ttf")
+}
+
+@font-face{
+    font-family: Tiempos;
+    src: url("./assets/TiemposHeadline-Light.woff")
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0,
+}
+
+a, li {
+    all: unset;
+}
+
+
+nav{
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+  width:100vw;
+
+    font-family: Tusker;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    letter-spacing:.08em;
+    color: white;
+}
+@keyframes letter-movement {
+    from {
+      transform: translateX(0);
+
+    }
+    to {
+      transform: translateX(-90%) scale(1.5 ,1.5);
+    }
+  }
+
+.letter{
+    transform-origin: center;
+    fill:red;
+    animation: letter-movement  1s ease-in-out ;
+    animation-fill-mode:forwards;
+}
+@keyframes top {
+    from{
+        height:100px;
+    }
+    to{
+        height:80;
+    }
+}
+.prueba{
+
+    background-color: white;
+  
+    color: black;
+    animation: ease 1s top;
+}
+
+.logo-prueba{
+    fill:black;
+    opacity: 2;
+    transition: opacity 1s ease-in-out;
+    
+}
+
+#hero{
+  overflow: hidden;
+    background-color: blue;
+    max-width:100vw;
+    min-height:100vh;
+}
+
+#hero video{
+    position: absolute;
+    left: 50%; /* % of surrounding element */
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+/*qUITAR ESTO PARA QUE SE VEA TODO*/
+
+}
+
+ #shop{
+
+   min-width:100vw;
+   height: 600px;
+}
+
+@keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - 7.45%));
+    }
+  }
+
+#shop{
+    position: absolute;  
+}
+#shop .blue-band{
+ overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-color: blue;
+    max-width:100vw;
+    height:100px;
+    color:white;
+    font-size:1.6em;
+    
+    font-family: Tusker;
+    
+}
+#shop .blue-band p{
+    text-transform: uppercase;
+    display: flex;
+    gap:2%;
+    text-wrap: nowrap;
+}
+.blue-band .icon-target{
+    width:40px;
+}
+
+.scroll {
+    animation: scroll 25s linear infinite;
+  }
+  
+  #shop .presentation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width:100vw;
+    height:auto;
+    font-family: Tiempos;
+    font-size:2.2em;
+    text-align: center;
+  }
+
+  @keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+  }
+  .presentation img{
+    width:100px;
+    animation: rotate 10s linear infinite;
+  }
+
+  
+
+  
